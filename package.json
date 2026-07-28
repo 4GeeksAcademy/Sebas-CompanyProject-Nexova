@@ -1,0 +1,9 @@
+{
+  "name": "sebas-companyproject-nexova",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -a 0.0.0.0",
+    "dev:no-cache": "npx http-server . -p 3000 -a 0.0.0.0 -c-1"
+  }
+}

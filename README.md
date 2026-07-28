@@ -28,6 +28,25 @@ This repository is the **starter template** for transversal projects. You will w
 5. **Start implementing** in the right folder — do not dump everything in the root.
 6. **Document** what you add: each new app, service, agent, or pipeline gets a subfolder + README.
 
+### Run the landing and application locally
+
+From the repository root:
+
+1. Run `npm run dev`
+2. Open `http://localhost:3000`
+
+Alternative direct command:
+
+1. Run `npx http-server . -p 3000 -a 0.0.0.0`
+
+For Codespaces, expose or open port `3000` from the Ports panel.
+
+### PageSpeed test evidence
+
+Current Lighthouse/PageSpeed test screenshot:
+
+![PageSpeed test results](./prueba-pagespeed.png)
+
 ---
 
 ## How to think about this monorepo
@@ -55,7 +74,8 @@ You are building **one company** across many milestones and projects. Each top-l
 >
 > - `CONTEXT.md` is a placeholder and must be replaced with your assigned company context.
 > - There is no root `AGENTS.md` yet.
-> - Shared package metadata exists in `packages/shared/package.json` (`@repo/shared-types`), but no workspace runner is configured at root.
+> - Shared package metadata exists in `packages/shared/package.json` (`@repo/shared-types`).
+> - A lightweight static runner is available at root via `npm run dev` for the landing and application pages.
 
 ---
 

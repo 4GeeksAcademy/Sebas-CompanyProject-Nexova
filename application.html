@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexova | Aplicacion</title>
+    <meta
+      name="description"
+      content="Formulario de aplicacion de Nexova para registro de candidatos con validacion en tiempo real y experiencia accesible."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Nexova" />
+    <link rel="canonical" href="https://nexova.example.com/application.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nexova" />
+    <meta property="og:title" content="Nexova | Aplicacion" />
+    <meta
+      property="og:description"
+      content="Completa tu registro de aplicacion en Nexova con un formulario claro, responsive y accesible."
+    />
+    <meta property="og:url" content="https://nexova.example.com/application.html" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1573496799515-eebbb63814f2?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nexova | Aplicacion" />
+    <meta
+      name="twitter:description"
+      content="Registra tu aplicacion en Nexova con validaciones de datos y formulario accesible."
+    />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1573496799515-eebbb63814f2?auto=format&fit=crop&w=1200&q=80" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Nexova",
+            "url": "https://nexova.example.com",
+            "logo": "https://nexova.example.com/logo.png"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Nexova | Aplicacion",
+            "url": "https://nexova.example.com/application.html",
+            "description": "Formulario de aplicacion de Nexova para registro de candidatos.",
+            "inLanguage": "es",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "Nexova",
+              "url": "https://nexova.example.com"
+            },
+            "potentialAction": {
+              "@type": "RegisterAction",
+              "target": "https://nexova.example.com/application.html"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-slate-100 text-slate-900">
+    <a href="#application-main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-900 focus:shadow">
+      Saltar al formulario
+    </a>
+
+    <main id="application-main" class="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-12">
+      <header class="mb-6">
+        <a href="index.html" class="mb-4 inline-block text-sm font-medium text-sky-700 hover:underline">← Volver al inicio</a>
+        <h1 class="mb-2 text-3xl font-bold tracking-tight sm:text-4xl">Formulario de aplicacion</h1>
+        <p class="text-slate-600">Completa tus datos para registrarte. Todos los campos marcados son obligatorios.</p>
+      </header>
+
+      <section class="rounded-2xl bg-white p-6 shadow-sm sm:p-8" aria-labelledby="application-form-title">
+        <h2 id="application-form-title" class="sr-only">Registro de aplicacion</h2>
+
+        <form id="applicationForm" class="space-y-8" novalidate>
+          <fieldset class="space-y-5 rounded-2xl border border-slate-200 p-4 sm:p-6">
+            <legend class="px-2 text-base font-semibold text-slate-900">Informacion personal</legend>
+
+            <div class="grid gap-5 md:grid-cols-2">
+              <div class="md:col-span-2">
+                <label for="fullName" class="mb-1 block text-sm font-medium">Nombre completo</label>
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  required
+                  aria-required="true"
+                  aria-describedby="fullNameError"
+                  autocomplete="name"
+                  class="w-full rounded-lg border border-slate-300 px-3 py-2.5 outline-none ring-sky-500 focus:ring-2"
+                  placeholder="Ej: Ana Perez"
+                />
+                <p class="form-error hidden" id="fullNameError" role="alert" aria-live="polite"></p>
+              </div>
+
+              <div>
+                <label for="email" class="mb-1 block text-sm font-medium">Correo electronico</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="emailError"
+                  autocomplete="email"
+                  class="w-full rounded-lg border border-slate-300 px-3 py-2.5 outline-none ring-sky-500 focus:ring-2"
+                  placeholder="Ej: ana@email.com"
+                />
+                <p class="form-error hidden" id="emailError" role="alert" aria-live="polite"></p>
+              </div>
+
+              <div>
+                <label for="phone" class="mb-1 block text-sm font-medium">Telefono</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  aria-required="true"
+                  aria-describedby="phoneError"
+                  autocomplete="tel"
+                  class="w-full rounded-lg border border-slate-300 px-3 py-2.5 outline-none ring-sky-500 focus:ring-2"
+                  placeholder="Ej: +34 600 123 456"
+                />
+                <p class="form-error hidden" id="phoneError" role="alert" aria-live="polite"></p>
+              </div>
+
+              <div>
+                <label for="birthDate" class="mb-1 block text-sm font-medium">Fecha de nacimiento</label>
+                <input
+                  id="birthDate"
+                  name="birthDate"
+                  type="date"
+                  required
+                  aria-required="true"
+                  aria-describedby="birthDateError"
+                  class="w-full rounded-lg border border-slate-300 px-3 py-2.5 outline-none ring-sky-500 focus:ring-2"
+                />
+                <p class="form-error hidden" id="birthDateError" role="alert" aria-live="polite"></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="space-y-5 rounded-2xl border border-slate-200 p-4 sm:p-6">
+            <legend class="px-2 text-base font-semibold text-slate-900">Seguridad de acceso</legend>
+
+            <div>
+              <label for="password" class="mb-1 block text-sm font-medium">Contrasena</label>
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                  aria-required="true"
+                  aria-describedby="passwordError"
+                  minlength="8"
+                  autocomplete="new-password"
+                  class="w-full rounded-lg border border-slate-300 px-3 py-2.5 outline-none ring-sky-500 focus:ring-2"
+                  placeholder="Minimo 8 caracteres"
+                />
+                <button
+                  id="togglePassword"
+                  type="button"
+                  class="inline-flex shrink-0 items-center justify-center rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-100"
+                  aria-controls="password"
+                  aria-pressed="false"
+                >
+                  Mostrar
+                </button>
+              </div>
+              <p class="form-error hidden" id="passwordError" role="alert" aria-live="polite"></p>
+            </div>
+          </fieldset>
+
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <button
+              type="submit"
+              class="inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-5 py-3 font-semibold text-white transition hover:bg-slate-700 sm:w-auto"
+            >
+              Enviar registro
+            </button>
+            <button
+              type="reset"
+              class="inline-flex w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-700 transition hover:bg-slate-100 sm:w-auto"
+            >
+              Limpiar formulario
+            </button>
+          </div>
+
+          <p id="successMessage" class="hidden rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-700" role="status" aria-live="polite" tabindex="-1">
+            Formulario enviado correctamente.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="validation.js"></script>
+  </body>
+</html>
