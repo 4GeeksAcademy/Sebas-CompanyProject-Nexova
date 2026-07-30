@@ -18,26 +18,32 @@ if (form) {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phonePattern = /^\+?[0-9\s()-]{7,20}$/;
   const fullNamePattern = /^[a-zA-Z\s\u00C0-\u017F'.-]+$/;
+  const errorInputClasses = ['border-red-600', 'ring-2', 'ring-red-200'];
+  const validInputClasses = ['border-green-600', 'ring-2', 'ring-green-200'];
+
+  const removeStateClasses = (input) => {
+    input.classList.remove(...errorInputClasses);
+    input.classList.remove(...validInputClasses);
+  };
 
   const clearError = (input, errorNode) => {
-    input.classList.remove('input-error');
-    input.classList.remove('input-valid');
+    removeStateClasses(input);
     input.setAttribute('aria-invalid', 'false');
     errorNode.classList.add('hidden');
     errorNode.textContent = '';
   };
 
   const setError = (input, errorNode, message) => {
-    input.classList.add('input-error');
-    input.classList.remove('input-valid');
+    removeStateClasses(input);
+    input.classList.add(...errorInputClasses);
     input.setAttribute('aria-invalid', 'true');
     errorNode.textContent = message;
     errorNode.classList.remove('hidden');
   };
 
   const setValid = (input, errorNode) => {
-    input.classList.remove('input-error');
-    input.classList.add('input-valid');
+    removeStateClasses(input);
+    input.classList.add(...validInputClasses);
     input.setAttribute('aria-invalid', 'false');
     errorNode.classList.add('hidden');
     errorNode.textContent = '';
