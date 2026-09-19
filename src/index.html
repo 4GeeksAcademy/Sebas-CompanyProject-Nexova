@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nexova - Utilidades de datos (prueba)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 p-8 max-w-3xl mx-auto">
+  <h1 class="text-2xl font-bold mb-4">Nexova — Prueba de utilidades de datos</h1>
+
+  <section class="bg-white rounded-lg shadow p-4 mb-4">
+    <h2 class="font-semibold mb-2">Filtrar candidatos</h2>
+    <div class="flex gap-2 mb-2">
+      <input id="filter-skill" type="text" placeholder="Habilidad (ej: Node.js)" class="border rounded px-2 py-1 flex-1" />
+      <select id="filter-english" class="border rounded px-2 py-1">
+        <option value="">Nivel de inglés</option>
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+        <option value="C1">C1</option>
+        <option value="C2">C2</option>
+      </select>
+    </div>
+    <button id="btn-filter-candidates" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700">Filtrar candidatos</button>
+  </section>
+
+  <section class="bg-white rounded-lg shadow p-4 mb-4 flex flex-wrap gap-2">
+    <button id="btn-filter-jobs" class="bg-indigo-600 text-white px-3 py-1 rounded hover:bg-indigo-700">Vacantes abiertas</button>
+    <button id="btn-sort-multi" class="bg-indigo-600 text-white px-3 py-1 rounded hover:bg-indigo-700">Ordenar vacantes (multi-campo)</button>
+    <button id="btn-linear-search" class="bg-emerald-600 text-white px-3 py-1 rounded hover:bg-emerald-700">Búsqueda lineal</button>
+    <button id="btn-binary-search" class="bg-emerald-600 text-white px-3 py-1 rounded hover:bg-emerald-700">Búsqueda binaria</button>
+    <button id="btn-reports" class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700">Generar reportes</button>
+    <button id="btn-validations" class="bg-rose-600 text-white px-3 py-1 rounded hover:bg-rose-700">Validar datos</button>
+  </section>
+
+  <section class="bg-white rounded-lg shadow p-4">
+    <h2 class="font-semibold mb-2">Resultados</h2>
+    <ul id="output" class="text-sm"></ul>
+  </section>
+
+  <!-- Requiere compilar TypeScript primero: npm run build -->
+  <script type="module" src="../dist/index.js"></script>
+</body>
+</html>
